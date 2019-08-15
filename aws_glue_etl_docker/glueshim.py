@@ -154,7 +154,7 @@ try:
         return list(prefixes)
 
     def _get_arguments(defaults):
-        return getResolvedOptions(sys.argv, ['JOB_NAME'] + defaults.keys())
+        return getResolvedOptions(sys.argv, ['JOB_NAME'] + list(defaults))
 
     def _get_logger(spark_context):
         return spark_context.get_logger()
